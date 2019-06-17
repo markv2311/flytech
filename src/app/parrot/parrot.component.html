@@ -1,0 +1,15 @@
+<h1>Parrot Drones</h1>
+
+<button (click)="getanafi()">Anafi info</button>
+
+<form [formGroup]= "droneform" (ngSubmit)="addDrone()" class= "form-horizontal">
+  <input type= "text"
+  input id="dronename" formControlName="dronename"/>
+  <button type = "submit"> Add Drone</button>
+  <button type = "button" (click) ="removeLastDrone()" ion-button> Delete Drone</button>
+</form>
+<ul>
+    <li *ngFor="let drone of parrotDrones">
+      {{ drone }}
+    </li>
+  </ul>

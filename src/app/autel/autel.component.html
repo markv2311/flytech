@@ -1,0 +1,19 @@
+<h1>Autel Drones</h1>
+
+<button (click)="getEvo()">Evo info</button>
+<p *ngIf = "yes">This drone is $900 and has a camera that can shoot in 4k 60fps. It can fold up and is very
+  portable for any type of trip. It competes with the Mavic Pro 2 Serious, or maybe that drone
+  competes with i?
+</p>
+
+<form [formGroup]= "droneform" (ngSubmit)="adddrone()" class= "form-horizontal">
+  <input type= "text"
+  input id="dronename" formControlName="dronename"/>
+  <button type = "submit"> Add Drone</button>
+  <button type = "button" (click) ="removedrone()" ion-button> Delete Drone</button>
+</form>
+<ul>
+    <li *ngFor="let drone of auteldrones">
+      {{ drone }}
+    </li>
+  </ul>
