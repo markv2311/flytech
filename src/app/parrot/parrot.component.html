@@ -1,6 +1,10 @@
 <h1>Parrot Drones</h1>
 
 <button (click)="getanafi()">Anafi info</button>
+<p *ngIf = "yes">This drone is $900 and has a camera that can shoot in 4k 60fps. It can fold up and is very
+    portable for any type of trip. It competes with the Mavic Pro 2 Serious, or maybe that drone
+    competes with i?
+  </p>
 
 <form [formGroup]= "droneform" (ngSubmit)="addDrone()" class= "form-horizontal">
   <input type= "text"
